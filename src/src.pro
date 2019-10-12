@@ -13,8 +13,18 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    network/hpudpservice.cpp \
+    network/hpmessgerecorder.cpp \
+    test.cpp \
+    theme.cpp \
+    theme_p.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    network/hpudpservice.h \
+    network/hpmessgerecorder.h \
+    test.h \
+    theme.h \
+    theme_p.h
 
 FORMS    += mainwindow.ui
