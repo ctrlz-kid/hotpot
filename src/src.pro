@@ -28,3 +28,6 @@ HEADERS  += mainwindow.h \
     theme_p.h
 
 FORMS    += mainwindow.ui
+
+#ini path
+DEPENDPATH += ../ini
