@@ -8,12 +8,12 @@
 namespace Extras {
     static Theme *m_creatorTheme = 0;
 
-    Theme *creatorTheme()
+    Theme *graphTheme()
     {
         return m_creatorTheme;
     }
 
-    void setCreatorTheme(Theme *theme)
+    void setGraphTheme(Theme *theme)
     {
         if (m_creatorTheme == theme)
             return;

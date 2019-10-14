@@ -27,9 +27,9 @@ private:
 };
 
 
-Theme *creatorTheme();
+Theme *graphTheme();
 
-void setCreatorTheme(Theme *theme);
+void setGraphTheme(Theme *theme);
 
 }
 

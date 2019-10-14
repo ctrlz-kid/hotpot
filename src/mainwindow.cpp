@@ -16,10 +16,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
     Extras::Theme themeHandle;
-    Extras::setCreatorTheme(&themeHandle);
+    Extras::setGraphTheme(&themeHandle);
 
-    Extras::creatorTheme()->readSettings(*config);
-    QColor color = Extras::creatorTheme()->palette("text");
+    Extras::graphTheme()->readSettings(*config);
+    QColor color = Extras::graphTheme()->palette("text");
 
 
     const QMetaObject &m = *metaObject();
@@ -28,17 +28,17 @@ MainWindow::MainWindow(QWidget *parent) :
     {
         QMetaEnum e = m.enumerator(m.indexOfEnumerator("Color"));
         int x  = m.indexOfEnumerator("Color");
-        Extras::creatorTheme()->setSomething(*config, e);
+        Extras::graphTheme()->setSomething(*config, e);
     }
 
 
-    color = Extras::creatorTheme()->color(Color::pushbutton1);
+    color = Extras::graphTheme()->color(Color::pushbutton1);
     QString s;
     s = QString("color: rgb(%1,%2,%3);").arg(color.red()).arg(color.green()).arg(color.blue());
 
     ui->pushButton->setStyleSheet(s);
 
-    color = Extras::creatorTheme()->color(Color::pushbutton2);
+    color = Extras::graphTheme()->color(Color::pushbutton2);
     s = QString("color: rgb(%1,%2,%3);").arg(color.red()).arg(color.green()).arg(color.blue());
     ui->pushButton_2->setStyleSheet(s);
 }
